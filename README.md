@@ -99,11 +99,11 @@ And install `terraform-docs` with `go get github.com/segmentio/terraform-docs` o
 
 ## Contributing
 
-Report issues/questions/feature requests on in the [issues](https://gitlab.int.hextech.io/technology/utils/developers/terraform-minikube-hextrust-development/issues/new) section.
+Report issues/questions/feature requests on in the [issues](https://github.com/hextrust/terraform-local-k8s-development/issues/new) section.
 
 ## Authors
 
-Created by [Aaron Baideme](https://gitlab.int.hextech.io/aaron.baideme) - aaron.baideme@hextrust.com
+Created by [Aaron Baideme](https://github.com/aaronforce1) - aaron.baideme@hextrust.com
 
 Supported by Marcus Cheng - marcus.cheng@hextrust.com
 
