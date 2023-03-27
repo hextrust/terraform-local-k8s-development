@@ -1,0 +1,61 @@
+##################################
+#### ------------------------ ####
+####  TERRAFORM               ####
+####  v1.0                    ####
+#### ------------------------ ####
+##################################
+
+### --
+### Logs
+### --
+logs
+*.log
+
+### --
+### Runtime
+### --
+pids
+*.pid
+*.seed
+
+
+### --
+### Compiled binary addons (http://nodejs.org/api/addons.html)
+### --
+build
+build/Release
+dist
+
+### --
+### Kubernetes
+### --
+.kubeconfig*
+
+### --
+### Terraform
+### --
+*.tfvars
+*.tfstate*
+.terraform/
+.infracost/
+terraform.tfstate.d/
+
+### --
+### Dev Dependencies
+### --
+.idea
+
+### --
+### Others
+### --
+*.log
+*.vault*
+*.pem
+*.gpg
+.DS_Store
+
+### --
+### Environment
+### --
+.env*
+!.env.example
