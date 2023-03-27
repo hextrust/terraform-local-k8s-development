@@ -59,3 +59,4 @@ terraform.tfstate.d/
 ### --
 .env*
 !.env.example
+!.env.yaml.example
