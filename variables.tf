@@ -39,12 +39,15 @@ variable "root_domain_name" {
   default     = "localhost"
 }
 variable "repository_secrets" {
+  type    = list(any)
   default = []
 }
 variable "credential_templates" {
+  type    = list(any)
   default = []
 }
 variable "registry_secrets" {
+  type    = list(any)
   default = []
 }
 
@@ -52,6 +55,7 @@ variable "generate_plugin_repository_secret" {
   default = false
 }
 variable "additionalProjects" {
+  type    = list(any)
   default = []
 }
 variable "chart_version" {
