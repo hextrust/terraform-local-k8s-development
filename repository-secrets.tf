@@ -15,8 +15,8 @@ resource "kubernetes_secret" "argocd_application_repository_secrets" {
     name     = each.value.name
     url      = each.value.url
     type     = each.value.type
-    username = each.value.secrets_store != "ssm" ? each.value.username : data.aws_ssm_parameter.infrastructure_credentials_username[each.value.username].value
-    password = each.value.secrets_store != "ssm" ? each.value.password : data.aws_ssm_parameter.infrastructure_credentials_password[each.value.password].value
+    username = each.value.username
+    password = each.value.password
   }
 }
 

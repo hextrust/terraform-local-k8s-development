@@ -10,10 +10,10 @@ resource "kubernetes_secret" "regcred" {
     ".dockerconfigjson" = sensitive(jsonencode({
       auths = {
         (each.value.url) = {
-          "username" = each.value.secrets_store != "ssm" ? each.value.username : data.aws_ssm_parameter.infrastructure_credentials_registry_username[each.value.username].value
-          "password" = each.value.secrets_store != "ssm" ? each.value.password : data.aws_ssm_parameter.infrastructure_credentials_registry_password[each.value.password].value
+          "username" = each.value.username
+          "password" = each.value.password
           "email"    = each.value.email
-          "auth"     = base64encode("${each.value.secrets_store != "ssm" ? each.value.username : data.aws_ssm_parameter.infrastructure_credentials_registry_username[each.value.username].value}:${each.value.secrets_store != "ssm" ? each.value.password : data.aws_ssm_parameter.infrastructure_credentials_registry_password[each.value.password].value}")
+          "auth"     = base64encode("${each.value.username}:${each.value.password}")
         }
       }
     }))
