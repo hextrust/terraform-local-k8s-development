@@ -38,4 +38,23 @@ variable "root_domain_name" {
   description = "Local Domain name that can route to minikube ip"
   default     = "localhost"
 }
+variable "repository_secrets" {
+  default = []
+}
+variable "credential_templates" {
+  default = []
+}
+variable "registry_secrets" {
+  default = []
+}
+
+variable "generate_plugin_repository_secret" {
+  default = false
+}
+variable "additionalProjects" {
+  default = []
+}
+variable "chart_version" {
+  default = "5.29.1"
+}
 
